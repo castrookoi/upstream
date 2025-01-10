@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Customized Styling */
+:root{
+    --primary-color: #ffff;
+    --text-color: #ff6e00;
+    --fill-color: #ff7200;
+}
+
+
+body{
+    background: linear-gradient(to top, rgba(0.5, 0.5, 0.5, 0.5)50%, rgba(0.5, 0.5, 0.5, 0.5)50%), url(./assets/mainImage.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    display: flex;
+   justify-content: space-between;
+   margin: auto 30px;
+   padding: 15px 30px;
+   align-items: center;
+   background-color: green;
+}
+
+nav .logo{
+    color: var(--text-color);
+    font-size: 2.2em;
+
+}
+
+
+
+.navbar ul {
+    display: flex;
+    gap: 50px;
+}
+
+.navbar ul li{
+    list-style: none;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.srch_container{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    grid-area: 5px;
+    position: relative;
+    
+}
+
+.srch_container input{
+    background: transparent;
+    border: 1px solid var(--fill-color);
+    padding: 20px;
+    border-radius: 5px 0px 0px 5px;
+    background: transparent;
+    width: 24vw; 
+    height: 35px;
+    border-right: none !important;
+    border-top-right-radius: none !important;
+   border-bottom-right-radius: none !important;
+}
+.srch_container input:focus{
+    outline: none;
+    }
+
+.srch_container button{
+    background-color: var(--fill-color);
+    /* margin: 0; */
+    border: 1px solid var(--fill-color);
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 13px 24px;
+    border-bottom-right-radius: 5px;
+    /* height: 42px; */
+    cursor: pointer;
+    position: relative;
+}
+
+.srch_container button:focus{
+    outline: none;
+    }
+
+    .menuIcon svg{
+        display: none;
+        width: 50px;
+        cursor: pointer;
+
+
+    } 
+
+    @media screen and (max-width: 768px) {
+        .navbar ul {
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .srch_container{ display: none;}
+
+        .menuIcon svg{display: flex;}
+    }
